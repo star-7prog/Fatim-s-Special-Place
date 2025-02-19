@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatim’s Special Place </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <script>
+        const text = "Selamat Datang, Fatim!";
+         <p>Website ini aku buat khusus untukmu, sebagai hadiah kecil dari aku untukmu.</p>
+        let index = 0;
+    
+        function typeEffect() {
+            if (index < text.length) {
+                document.getElementById("typing-text").innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeEffect, 100);
+            }
+        }
+    
+        window.onload = typeEffect;
+    </script>
+    
+<!-- Header -->
+<header>
+    <h1>Fatim’s Special Place </h1>
+</header>
+
+<!-- Navigation -->
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="letter.html">Letter</a></li>
+        <li><a href="Memories and journey.html">memories</a></li>
+
+    </ul>
+</nav>
+
+<!-- Home Section -->
+<section id="home" class="section">
+    <h2 id="typing-text"></h2>
+
+    
+    <div class="content">
+        <h2>Selamat Datang, Fatim!</h2>
+        <p>Website ini aku buat khusus untukmu, sebagai hadiah kecil dari aku untukmu. 
+            Website ini ada beberapa menu yang aku buat, aku harap kamu suka yaa</p>
+    </div>
+    <div class="image-container">
+        <img src="images/6.png" alt="Welcome Image">
+        
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="section reverse">
+    <script>
+    const aboutText = "Tentang Website Ini";
+    let aboutIndex = 0;
+
+    function typeEffectAbout() {
+        if (aboutIndex < aboutText.length) {
+            document.getElementById("typing-about").innerHTML += aboutText.charAt(aboutIndex);
+            aboutIndex++;
+            setTimeout(typeEffectAbout, 100); // Kecepatan mengetik (100ms per karakter)
+        }
+    }
+
+    window.onload = function () {
+        typeEffectAbout(); // Jalankan efek mengetik saat halaman dimuat
+    };
+</script>
+
+    
+    <div class="image-container">
+        <img src="images/7.png" alt="About Image">
+    </div>
+    <div class="content">
+        <h2 id="typing-about"></h2>
+        <p>"Seperti bintang yang selalu menemani malam, seperti angin yang membawa kesejukan, begitulah kehadiranmu dalam hidupku. 
+            Inilah caraku mengabadikan semua itu untuk kita."</p>
+    </div>
+
+</section>
+  
+
+
+<footer>
+    <video autoplay muted loop>
+        <source src="images/ghibli.mp4" type="video/mp4">
+        Browser kamu tidak mendukung video.
+    </video>
+    <p>© 2025 Website Spesial. All Rights Reserved.</p>
+</footer>
+
+
+<!-- JavaScript for Carousel -->
+<script>
+    // JavaScript untuk carousel jika diperlukan di halaman ini
+</script>
+
+</body>
+</html>
+

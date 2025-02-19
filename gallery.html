@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Fatim’s Special Place </title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <h1>Gallery</h1>
+</header>
+
+<!-- Navigation -->
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="letter.html">Letter</a></li>
+        <li><a href="Memories and journey.html">memories</a></li>
+    </ul>
+</nav>
+
+<!-- Image Carousel -->
+<section id="gallery" class="section">
+    <h2>Gallery</h2>
+    <div class="carousel-container">
+        <div class="carousel">
+            <img src="images/1.jpg" class="active" alt="Gambar 1">
+            <img src="images/2.jpg" alt="Gambar 2">
+            <img src="images/3.jpg" alt="Gambar 3">
+            <img src="images/4.jpg" alt="Gambar 4">
+            <img src="images/5.jpg" alt="Gambar 5">
+        </div>
+    </div>
+</section>
+
+<section id="playlist">
+    <h2>Playlist Spesial</h2>
+
+    <!-- Canvas untuk visualizer -->
+    <canvas id="visualizer"></canvas>
+
+    <!-- Audio Player -->
+    <section id="custom-audio">
+        <h2>Audio Player dengan Gambar</h2>
+        <div class="audio-container">
+            <img src="images/2.jpg" alt="Cover Audio" class="audio-cover">
+    <audio id="audioPlayer" controls>
+        <source src="songs/A Thousand Years.mp3" type="audio/mpeg">
+        <source src="songs/Bunga Maaf (Visualizer).mp3" type="audio/mpeg">
+        <source src="songs/My Love (Official Video).mp3" type="audio/mpeg">
+    </audio>
+</section>
+
+<!-- JavaScript for Carousel -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel img');
+
+        function showNextImage() {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('active');
+        }
+
+        setInterval(showNextImage, 3000);
+    });
+</script>
+
+</body>
+</html>
