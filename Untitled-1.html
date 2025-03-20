@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ucapan Ulang Tahun</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Selamat Ulang Tahun, Fatim! 🎂🎉</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="letter.html">Letter</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="birthday.html">Birthday</a></li>
+    </ul>
+</nav>
+
+<section id="birthday">
+    <h2>🎁 Ucapan Spesial untuk Fatim 🎁</h2>
+    <p>Hari ini adalah hari yang spesial! Aku ingin mengucapkan **selamat ulang tahun** untukmu, Fatim! 🎂💖</p>
+    <p>Semoga di usia yang baru ini, semua harapan dan impianmu bisa terwujud. Aku selalu mendukungmu di setiap langkahmu. ✨</p>
+
+    <div class="birthday-card">
+        <img src="images/birthday-cake.png" alt="Kue Ulang Tahun">
+        <h3>Happy Birthday, Fatim! 🎈🎊</h3>
+        <p>Aku bersyukur bisa mengenalmu dan merayakan hari spesial ini bersamamu, walaupun mungkin jarak memisahkan kita. 💖</p>
+    </div>
+
+    <button onclick="showSurprise()">Klik untuk Kejutan! 🎁</button>
+    <div id="surprise" class="hidden">
+        <p>🎉 SURPRISE! 🎉</p>
+        <iframe width="300" height="170" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+    </div>
+</section>
+
+<footer>
+    <p>Copyright © 2025 | Ucapan spesial untuk Fatim 🎂</p>
+</footer>
+
+<script>
+    function showSurprise() {
+        document.getElementById("surprise").classList.toggle("hidden");
+    }
+</script>
+
+</body>
+</html>
